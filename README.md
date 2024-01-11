@@ -1,4 +1,4 @@
-# ---###智慧城市课程设计2020级
+### 智慧城市课程设计2020级
 
 #### 基于实时交通速度预测的动态路径规划的交通速度预测部分
 ```
@@ -40,9 +40,9 @@
 |   `-- output_all.pth  # 总数据集预测结果
 `-- utils  
 ```
+
 #### 数据文件补充
 /data以及模型训练的部分实验结果见百度网盘，链接及密码在报告最后
-
 
 #### 模型训练及预测运行命令
 ```shell
@@ -52,4 +52,5 @@ python main.py Qtraffic MGT E01 0
 
 #### 参考
 Qtraffic数据集https://github.com/JingqingZ/BaiduTraffic/tree/master
+
 MGT时空交通预测模型 https://github.com/lonicera-yx/MGT
