@@ -1,0 +1,137 @@
+Start time: 2023-11-09 12:02:09.997499
+---------- Args ----------
+{
+  "dataset": "Qtraffic",
+  "model": "MGT",
+  "name": "E03",
+  "gpu": "0",
+  "batch_size": 1,
+  "num_workers": 8,
+  "lr": 0.001,
+  "eps": 1e-08,
+  "weight_decay": 0.0002,
+  "milestones": [
+    50,
+    80
+  ],
+  "gamma": 0.1,
+  "epochs": 10,
+  "val_freq": 1,
+  "clip_grad_norm": false,
+  "max_grad_norm": 5,
+  "test": false,
+  "save_every": 101,
+  "dataset_model_args": {
+    "dataset": {
+      "root": "data",
+      "eigenmaps_k": 8,
+      "similarity_delta": 0.1
+    },
+    "model": {
+      "d_model": 16,
+      "d_k": 4,
+      "d_hidden_mt": 16,
+      "d_hidden_ff": 16,
+      "eigenmaps_k": 8,
+      "num_embeddings": [
+        96,
+        2,
+        2,
+        2,
+        24,
+        4,
+        2
+      ],
+      "num_features": 1,
+      "num_encoder_layers": 6,
+      "num_decoder_layers": 6,
+      "num_heads": 4,
+      "which_transition_matrices": [
+        true,
+        true
+      ],
+      "in_len": 1,
+      "out_len": 1,
+      "use_curriculum_learning": false,
+      "cl_decay_steps": 200,
+      "dropout": 0.3,
+      "noTSA": false,
+      "noSSA": false,
+      "noMeta": true,
+      "noTE": false,
+      "noSE": false
+    }
+  },
+  "exp_dir": "exps/Qtraffic/MGT/E03"
+}
+--------- Model Info ---------
+Model size: 0.212996MB
+---------- Training ----------
+num_samples: 4056, num_batches: 4056
+[epoch 0/9] ave_loss: 1.899571, time_elapsed: 2390.674543(sec)
+Validating...
+num_samples: 869, num_batches: 869
+time_elapsed: 158.969452(sec)
+The best model 'best.pth' has been updated
+mae: 1.756184, best_mae: 1.756184
+[epoch 1/9] ave_loss: 1.751601, time_elapsed: 2382.376230(sec)
+Validating...
+num_samples: 869, num_batches: 869
+time_elapsed: 156.474117(sec)
+mae: 1.799739, best_mae: 1.756184
+[epoch 2/9] ave_loss: 1.734525, time_elapsed: 2357.807086(sec)
+Validating...
+num_samples: 869, num_batches: 869
+time_elapsed: 156.562604(sec)
+The best model 'best.pth' has been updated
+mae: 1.711835, best_mae: 1.711835
+[epoch 3/9] ave_loss: 1.720755, time_elapsed: 2346.957372(sec)
+Validating...
+num_samples: 869, num_batches: 869
+time_elapsed: 155.156753(sec)
+The best model 'best.pth' has been updated
+mae: 1.704917, best_mae: 1.704917
+[epoch 4/9] ave_loss: 1.714770, time_elapsed: 2390.580251(sec)
+Validating...
+num_samples: 869, num_batches: 869
+time_elapsed: 155.210150(sec)
+mae: 1.709359, best_mae: 1.704917
+[epoch 5/9] ave_loss: 1.711337, time_elapsed: 2398.138115(sec)
+Validating...
+num_samples: 869, num_batches: 869
+time_elapsed: 155.268673(sec)
+mae: 1.711095, best_mae: 1.704917
+[epoch 6/9] ave_loss: 1.709091, time_elapsed: 2408.972142(sec)
+Validating...
+num_samples: 869, num_batches: 869
+time_elapsed: 155.591085(sec)
+mae: 1.717391, best_mae: 1.704917
+[epoch 7/9] ave_loss: 1.708512, time_elapsed: 2423.290790(sec)
+Validating...
+num_samples: 869, num_batches: 869
+time_elapsed: 156.056733(sec)
+mae: 1.709782, best_mae: 1.704917
+[epoch 8/9] ave_loss: 1.706447, time_elapsed: 2392.869224(sec)
+Validating...
+num_samples: 869, num_batches: 869
+time_elapsed: 155.217559(sec)
+mae: 1.709396, best_mae: 1.704917
+[epoch 9/9] ave_loss: 1.705663, time_elapsed: 2382.082685(sec)
+Validating...
+num_samples: 869, num_batches: 869
+time_elapsed: 154.777246(sec)
+mae: 1.716747, best_mae: 1.704917
+---------- Testing ----------
+num_samples: 870, num_batches: 870
+time_elapsed: 155.145756(sec)
+       rmse       mae      mape
+0  2.647334  1.692337  6.031588
+--------------------------
+End time: 2023-11-09 19:08:50.353332
+---------- Testing ----------
+num_samples: 5795, num_batches: 5795
+time_elapsed: 1026.839053(sec)
+      rmse       mae      mape
+0  2.65716  1.695846  6.010418
+--------------------------
+End time: 2023-11-09 20:15:27.091749
