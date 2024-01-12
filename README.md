@@ -46,6 +46,7 @@
 
 #### 模型训练及预测运行命令
 ```shell
+pip install requirements.txt
 # python main.py <dataset> MGT <experiment name> <CUDA device>
 python main.py Qtraffic MGT E01 0
 ```
